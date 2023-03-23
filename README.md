@@ -1,12 +1,6 @@
 ## Laravel Settings
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/qcod/laravel-settings.svg)](https://packagist.org/packages/qcod/laravel-settings)
-[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE.md)
-[![Build Status](https://img.shields.io/travis/qcod/laravel-settings/master.svg)](https://travis-ci.org/qcod/laravel-settings)
-[![StyleCI](https://styleci.io/repos/152258044/shield)](https://styleci.io/repos/152258044)
-[![Total Downloads](https://img.shields.io/packagist/dt/qcod/laravel-settings.svg)](https://packagist.org/packages/qcod/laravel-settings)
-
-Use `qcod/laravel-settings` to store key value pair settings in the database.
+Use `timavo/laravel-settings` to store key value pair settings in the database.
 
 > All the settings saved in db is cached to improve performance by reducing sql query to zero.
 
@@ -15,7 +9,7 @@ Use `qcod/laravel-settings` to store key value pair settings in the database.
 **1** - You can install the package via composer:
 
 ```bash
-$ composer require qcod/laravel-settings
+$ composer require timavo/laravel-settings
 ```
 
 **2** - If you are installing on Laravel 5.4 or lower you will be needed to manually register Service Provider by adding it in `config/app.php` providers array and Facade in aliases arrays.
@@ -23,12 +17,12 @@ $ composer require qcod/laravel-settings
 ```php
 'providers' => [
     //...
-    QCod\Settings\SettingsServiceProvider::class
+    Timavo\Settings\SettingsServiceProvider::class
 ]
 
 'aliases' => [
     //...
-    "Settings" => QCod\Settings\Facade::class
+    "Settings" => Timavo\Settings\Facade::class
 ]
 ```
 
@@ -39,7 +33,7 @@ In Laravel 5.5 or above the service provider automatically get registered and a 
 Optionally you can publish migration by running
 
 ```
-php artisan vendor:publish --provider="QCod\Settings\SettingsServiceProvider" --tag="migrations"
+php artisan vendor:publish --provider="Timavo\Settings\SettingsServiceProvider" --tag="migrations"
 ```
 
 ### Getting Started
@@ -60,7 +54,7 @@ settings()->set($key, $value);
 
 // Set a multiple settings
 settings()->set([
-   'app_name' => 'QCode',
+   'app_name' => 'Timavo',
    'app_email' => 'info@email.com',
    'app_type' => 'SaaS'
 ]);
@@ -117,10 +111,6 @@ If you discover any security related issues, please email saquibweb@gmail.com in
 ### Credits
 
 - [Mohd Saqueib Ansari](https://github.com/saqueib)
-
-### About QCode.in
-
-QCode.in (https://www.qcode.in) is blog by [Saqueib](https://github.com/saqueib) which covers All about Full Stack Web Development.
 
 ### License
 
