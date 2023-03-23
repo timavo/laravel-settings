@@ -1,11 +1,11 @@
 {
-  "name": "qcod/laravel-settings",
+  "name": "timavo/laravel-settings",
   "description": "Store key value pair in database as settings",
-  "homepage": "https://github.com/qcod/laravel-settings",
+  "homepage": "https://github.com/timavo/laravel-settings",
   "type": "library",
   "license": "MIT",
   "keywords": [
-    "qcod",
+    "timavo",
     "laravel",
     "database settings",
     "db settings",
@@ -13,8 +13,8 @@
   ],
   "authors": [
     {
-      "name": "Mohd Saqueib Ansari",
-      "email": "saquibweb@gmail.com"
+      "name": "Tim Harenberg",
+      "email": "tim.Harenberg@gmail.com"
     }
   ],
   "require": {
@@ -31,7 +31,7 @@
       "src/migrations"
     ],
     "psr-4": {
-      "QCod\\Settings\\": "src/"
+      "Timavo\\Settings\\": "src/"
     },
     "files": [
       "src/helpers.php"
@@ -39,16 +39,16 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "QCod\\Settings\\Tests\\": "tests/"
+      "Timavo\\Settings\\Tests\\": "tests/"
     }
   },
   "extra": {
     "laravel": {
       "providers": [
-        "QCod\\Settings\\SettingsServiceProvider"
+        "Timavo\\Settings\\SettingsServiceProvider"
       ],
       "aliases": {
-        "Settings": "QCod\\Settings\\Facade"
+        "Settings": "Timavo\\Settings\\Facade"
       }
     }
   },
